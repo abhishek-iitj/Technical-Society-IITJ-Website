@@ -1,0 +1,503 @@
+<html lang="en">
+  <head>
+   <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+          
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Programming@IITJ</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="material.min.css">
+    <link rel="stylesheet" href="styles.css">
+  
+  <link rel="stylesheet" href="../assest/fonta/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+      <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="../assest/boot/js/jquery.js"></script>
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+
+    <style>
+     #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    visibility:hidden;
+    }
+  img{
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(60%);
+    padding:10px;
+    
+  
+  }
+  img:hover{
+    
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    
+    filter:drop-shadow(8px 8px 10px grey);
+  }
+  
+  div.top {
+  margin:20px;
+  position: relative;
+  width: 200px;
+  height: 220px;
+  overflow: hidden;
+  padding:0px;
+  } 
+  
+  div.top div {
+    width: 200px;
+    height:220px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter:drop-shadow(10px 10px 10px 10px grey);
+    text-align: center;
+      -webkit-transition: left 1s ease-in-out;
+    }
+  div.top div.first img{
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(30%);
+    height:100%;
+    width:100%;
+  } 
+  div.top div.first {
+    z-index: 1000;
+    
+    }   
+    
+  div.top:hover div.first {
+  -webkit-transition: left 1s ease-in-out;
+  left: -200px;
+  }
+  footer a{
+    color:white;font-size:14px;
+  }
+  
+ #load{
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:9999;
+    background:url("http://feliciaday.com/wp-content/themes/felicia_day/_/style/images/loading.gif") no-repeat center center rgba(0,0,0,1)
+}
+    </style>
+
+    <script type="text/javascript">
+        document.onreadystatechange = function () {
+  var state = document.readyState
+  if (state == 'interactive') {
+       document.getElementById('contents').style.visibility="hidden";
+  } else if (state == 'complete') {
+      setTimeout(function(){
+         document.getElementById('interactive');
+         document.getElementById('load').style.visibility="hidden";
+         document.getElementById('contents').style.visibility="visible";
+      },1000);
+  }
+}
+    </script>
+  </head>
+
+  <body >
+  <div id="load"></div>
+  <div class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base" id="contents">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<!-- Header and Nav Bar -->
+      <header class="mdl-layout__header mdl-layout__header--scroll" style="background-image:url(images/back.png);background-size: 100%;">
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        </div>
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row" >
+          <div class="col-lg-6">
+            <h3 align="center" style="color:#3B3168;">Technical Society IIT Jodhpur</h3>
+          </div>
+          <div class="col-lg-6" style="margin-left:300px;">
+          <img src="images/tech.png" height="200px" width="400px" align="right"></img>
+          </div>  
+        </div>
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        </div>
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect" style="background-color:#3B3168;" >
+          <a href="#home" class="mdl-layout__tab is-active">HOME</a>
+          <!--<a href="#projects" class="mdl-layout__tab">PROJECTS</a>-->
+          <a href="#technology" class="mdl-layout__tab">CELLS</a>
+          <a href="#team" class="mdl-layout__tab">TEAM</a>
+          <span class="mdl-layout__tab" style="font-size:20;margin-left:400px;color:white;">PROGRAMMING CLUB</span> 
+           <a style="padding:20px;color:white;" href="../home/home2.html"><i class="fa fa-home fa-2x"> </i></a>
+        </div>
+      </header>
+    
+      <main class="mdl-layout__content">
+<!-- OVERVIEW Tab content-->
+        <div class="mdl-layout__tab-panel is-active" id="home">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color-text--white">
+              <img src="images/ml.jpg" width="220px" height="250px"></img>
+            </header>
+            <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+              <div class="mdl-card__supporting-text">
+                <h4>Overview</h4>
+                WE are the programming fraternity of IIT Jodhpur. Established the year our college started, we have gone from strength to strength in the past years. <br>
+                WHETHER it is algorithmic programming challenges, AI games, hacking on something cool, we do it together.<br>
+        WE at Programming Club do not believe that a person is limited to just one field. Hence we have these different cells which promote and help to develop skills in their respective fields.
+              </div>
+              
+            </div>
+          </section>
+      
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                <h4 class="mdl-cell mdl-cell--12-col"><b>Events</b></h4>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <div class="section__circle-container__circle mdl-color--primary" >
+                      <img src="images/app.png" width="75px" style="margin-left:-5px;" height="70px"></img>
+                    </div>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5>API</h5>
+                  Participants need to develop an app. The app can be web based or for the Windows Mobile Platform. Apps can be developed for any categories such as Business Tools, Education, Enterntainment, Games, Lifestyle, NEws and Weather, Productivity Tools, Social and communication, Utilities etc.
+                </div>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <div class="section__circle-container__circle mdl-color--primary">
+                    <img src="images/c++.png" width="60px" height="65px"></img>
+                  </div>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5>Obfuscator</h5>
+                  This event will be conducted in two parts. In first half, each team has to write obfuscated code for the specific simple problem given to the team. The problem can be as simple as printing Fibonacci series. The team will be provided with the compiler for this part.
+                  After this, your code will be provided to every other team and you will be provided with the code of other teams. In second half, the teams have to go through the snapshots of codes of the other teams and decode the task being performed by them.
+                  </div>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <div class="section__circle-container__circle mdl-color--primary">
+                    <img src="images/html.png" width="75px" height="70px" style="margin-left:-5px;"></img>
+                  </div>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5>Webcraft</h5>
+                  WebCraft is an event to showcase your skills in the field of basic development of web pages. We provide you with a perfect platform to demonstrate your coding skills in fusion with creativity using HTML, CSS, and JavaScript.
+                </div>
+              </div>
+             
+            </div>
+           
+          </section>
+          <br><br>
+          <div class="row">
+            <div class="row">
+                <div class="col s12 l2 m2">
+                  <img src="images/dhpc.jpg" width="150px" height="80px" style="margin-top:20px;"></img>
+                </div>
+                <div class="col s12 l10 m10">
+                  <h5><a href="https://www.facebook.com/groups/dhpciitj/">Dark Hour Programming Contest</a></h5>
+              This is the annual competitive coding contest organised by Programming Club IITJ. This is an overnight team contest (max 3 people). People from all years take part in the contest to hone their programming skills. DirectI was sponser for the last year's contest. 
+                </div>
+              </div>
+            
+          </div>
+
+        </div>
+    
+<!-- Projects tab content   
+
+        <div class="mdl-layout__tab-panel" id="projects">
+          <section class="section--center mdl-grid mdl-grid--no-spacing">
+            <div class="mdl-cell mdl-cell--12-col">
+              <h4>Projects</h4>
+              Here lists the undergoing projects under Robotics Club. These projects are beingdone by students of different domains sharing similar interests.
+              <ul class="toc">
+                <h4>Contents</h4>
+                <a href="#lorem1">E-Commerce Android App</a>
+                <a href="#lorem2">PHP Myadmin Software simulation</a>
+                <a href="#lorem3">Compiler Design</a>
+                <a href="#lorem4">E-Commerce Web App</a>
+                <a href="#lorem5">NLP</a>
+              </ul>
+
+              <h5 id="lorem1">Line Following Robot</h5>
+              Excepteur et pariatur officia veniam anim culpa cupidatat consequat ad velit culpa est non.
+              <ul>
+                <li>Nisi qui nisi duis commodo duis reprehenderit consequat velit aliquip.</li>
+                <li>Dolor consectetur incididunt in ipsum laborum non et irure pariatur excepteur anim occaecat officia sint.</li>
+                <li>Lorem labore proident officia excepteur do.</li>
+              </ul>
+
+              <p>
+        Mobile robots have the capability to move around in their environment and are not fixed to one physical location. Mobile robots can be "autonomous" (AMR - autonomous mobile robot) which means they are capable of navigating an uncontrolled environment without the need for physical or electro-mechanical guidance devices. Alternatively, mobile robots can rely on guidance devices that allow them to travel a pre-defined navigation route in relatively controlled space (AGV - autonomous guided vehicle). By contrast, industrial robots are usually more-or-less stationary, consisting of a jointed arm (multi-linked manipulator) and gripper assembly (or end effector), attached to a fixed surface.
+        </p>
+          <button  class="btn waves-effect waves-light" ><a style="color:white;"href="articles.html"> Read More</a>
+              
+            </button>
+
+             <h5 id="lorem2">Obstacel Avoider Robot</h5>
+              Excepteur et pariatur officia veniam anim culpa cupidatat consequat ad velit culpa est non.
+              <ul>
+                <li>Nisi qui nisi duis commodo duis reprehenderit consequat velit aliquip.</li>
+                <li>Dolor consectetur incididunt in ipsum laborum non et irure pariatur excepteur anim occaecat officia sint.</li>
+                <li>Lorem labore proident officia excepteur do.</li>
+              </ul>
+
+              <p>
+        Mobile robots have the capability to move around in their environment and are not fixed to one physical location. Mobile robots can be "autonomous" (AMR - autonomous mobile robot) which means they are capable of navigating an uncontrolled environment without the need for physical or electro-mechanical guidance devices. Alternatively, mobile robots can rely on guidance devices that allow them to travel a pre-defined navigation route in relatively controlled space (AGV - autonomous guided vehicle). By contrast, industrial robots are usually more-or-less stationary, consisting of a jointed arm (multi-linked manipulator) and gripper assembly (or end effector), attached to a fixed surface.
+        </p>
+        <button  class="btn waves-effect waves-light" href="articles.html"><a style="color:white;"href="articles.html"> Read More</a>
+              
+            </button>
+      <h5 id="lorem3">Self Balancing Robot</h5>
+              Excepteur et pariatur officia veniam anim culpa cupidatat consequat ad velit culpa est non.
+              <ul>
+                <li>Nisi qui nisi duis commodo duis reprehenderit consequat velit aliquip.</li>
+                <li>Dolor consectetur incididunt in ipsum laborum non et irure pariatur excepteur anim occaecat officia sint.</li>
+                <li>Lorem labore proident officia excepteur do.</li>
+              </ul>
+
+              <p>
+        Mobile robots have the capability to move around in their environment and are not fixed to one physical location. Mobile robots can be "autonomous" (AMR - autonomous mobile robot) which means they are capable of navigating an uncontrolled environment without the need for physical or electro-mechanical guidance devices. Alternatively, mobile robots can rely on guidance devices that allow them to travel a pre-defined navigation route in relatively controlled space (AGV - autonomous guided vehicle). By contrast, industrial robots are usually more-or-less stationary, consisting of a jointed arm (multi-linked manipulator) and gripper assembly (or end effector), attached to a fixed surface.
+        </p>
+        <button  class="btn waves-effect waves-light" href="articles.html"><a style="color:white;"href="articles.html"> Read More</a>
+              
+            </button>
+      <h5 id="lorem4">Maze Solver Robot</h5>
+              Excepteur et pariatur officia veniam anim culpa cupidatat consequat ad velit culpa est non.
+              <ul>
+                <li>Nisi qui nisi duis commodo duis reprehenderit consequat velit aliquip.</li>
+                <li>Dolor consectetur incididunt in ipsum laborum non et irure pariatur excepteur anim occaecat officia sint.</li>
+                <li>Lorem labore proident officia excepteur do.</li>
+              </ul>
+
+              <p>
+        Mobile robots have the capability to move around in their environment and are not fixed to one physical location. Mobile robots can be "autonomous" (AMR - autonomous mobile robot) which means they are capable of navigating an uncontrolled environment without the need for physical or electro-mechanical guidance devices. Alternatively, mobile robots can rely on guidance devices that allow them to travel a pre-defined navigation route in relatively controlled space (AGV - autonomous guided vehicle). By contrast, industrial robots are usually more-or-less stationary, consisting of a jointed arm (multi-linked manipulator) and gripper assembly (or end effector), attached to a fixed surface.
+        </p>
+        <button  class="btn waves-effect waves-light" href="articles.html"><a style="color:white;"href="articles.html"> Read More</a> 
+            </button>
+            </div>
+          </section>
+        </div>
+    -->
+<!-- Cells Tab -->
+  
+    <div class="mdl-layout__tab-panel" id="technology">
+      <div class="row">
+        <div class="col l4 m4 s12">
+          <section class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                <div class="mdl-card mdl-cell mdl-cell--12-col">
+                  <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                  <h4 class="mdl-cell mdl-cell--12-col">Donalds</h4>
+                  
+                  <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                    <h5>Focus: Data structures and Algorithms.</h5>
+                    <p><h5>Description</h5>
+                    Competitive coding is the main agenda of meetups in this cell. Members of this cell know where to find all resources to enhance one’s competitive coding skills, how and where to practice, what to do in order to improve oneself at every stage in the vast field of algorithms.
+                    </p>
+                    <h5>What We Do</h5>
+                    <p>Participate in almost all major competitive coding contests online.<br>
+                    Participate in the international level coding olympics: the ACM ICPC.<br>
+                    Organize DHPCs (Dark Hour Programming Contests) for practice.<br>
+                    Conduct workshops and lectures regarding algorithms and data structures as required and requested by the students.</p>
+                    
+                  </div>
+                  </div>
+                
+                </div>
+                 
+          </section>
+        </div>
+        
+        <div class="col l4 m4 s12">
+          <section class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                <div class="mdl-card mdl-cell mdl-cell--12-col">
+                  <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                  <h4 class="mdl-cell mdl-cell--12-col">Assemblers</h4>
+                  
+                  <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                    <h5>Focus: Software, Web, and Mobile Development.</h5>
+                    <p><h5>Description</h5>
+                    This cell consists of the best developers in the club. Be it software, web tech, mobile apps, or anything new, fancy and helpful to the world, this cell accommodates for all the fields.
+                    </p>
+                    <h5>What We Do</h5>
+                    <p>Contribute to internationally well known open source software like Mozilla Firefox, DuckDuckGo, some well known Python libraries and many more. 
+                    Participate in Google Summer of Code (GSoC), 
+                    Build cool apps and host them on Android playstore and/or Windows appstore and/or on the web.
+                    Conduct workshops and lectures on latest web and mobile technologies and organize hackathons as required and requested by the students.</p>
+                    
+                  
+                  </div>
+                  </div>
+                </div>
+                 
+          </section>
+        </div>
+        
+        <div class="col l4 m4 s12">
+          <section class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                <div class="mdl-card mdl-cell mdl-cell--12-col">
+                  <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                  <h4 class="mdl-cell mdl-cell--12-col">Carpe Diem</h4>
+                  
+                  <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                    <h5>Focus: Cyber and Software Security (Hacking).</h5>
+                    <p><h5>Description</h5>
+                    This cell consists of meticulous programmers who love freedom (hackers). From script kiddies like phishing, unauthorized code injections, email-spoofing and cookie hacks to bolder and conceptual topics like cryptography, binary exploitation, reverse code engineering, steganography and network packet sniffing, we have it all.
+                    </p>
+                    <h5>What We Do</h5>
+                    <p>Participate in national and international Hacking competitions including Microsoft’s annual hacking championship, InCTF, and other international events on CTFtime.<br>
+                    Conduct workshops on hacking and new technologies and methods in the field and provide resources as required and requested by the students.</p>
+                    
+                  </div>
+                  </div>
+                </div>
+                 
+          </section>
+        </div>
+      </div>    
+    </div>  
+
+<!--Team Tab -->
+
+<div class="mdl-layout__tab-panel" id="team">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp"style="padding:20px;">
+      
+      <div class="row" style="width:100%">
+      <div class="col l4 m4 s12"></div>
+      <div class="col l4 m4 s12"style="text-align:center;">
+      <div class="top z-depth-3">
+        <div class="first"style="margin:0px;padding:0px;"><img src="images/archil.jpg"style="height:100%;width:100%"></img></div>
+        <div class="second" style="border:1px solid grey;padding-top:30px;">
+           <a href="https://www.facebook.com/archil.kumar?fref=ts" style="color: blue;"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+          <br><br>
+          <p style="">srivastava.1@iitj.ac.in</p>
+          <br>
+          <p style="font-weight:bold;font-size:14px;">ARCHIL KUMAR <BR>SRIVASTAVA <BR>HEAD</p>
+          
+        
+        </div>
+      </div>
+      </div>
+      <div class="col l4 m4 s12"></div>
+      </div>
+      
+      <div class="row">
+      <div class="col l6 m6 s12"style="text-align:center;">
+      <div class="top z-depth-3">
+        <div class="first"style="margin:0px;padding:0px;"><img src="images/abhishek.jpg"style="height:100%;width:100%"></img></div>
+        <div class="second" style="border:1px solid grey;padding-top:30px;">
+           <a href="https://www.facebook.com/abhishek.sah.3591" style="color: blue;"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+          <br><br>
+          <p style="">sah.1@iitj.ac.in</p>
+          <br>
+          <p style="font-weight:bold;font-size:18px;">ABHISHEK SAH</p>
+          <p style="font-weight:bold;font-size:18px;">ASSISTANT HEAD</p>
+        
+        </div>
+      </div>
+      </div>
+      <div class="col l6 m6 s12">
+      <div class="top z-depth-3">
+        <div class="first"style="margin:0px;padding:0px;"><img src="images/vishesh.jpg"style="height:100%;width:100%"></img></div>
+        <div class="second" style="border:1px solid grey;padding-top:30px;">
+           <a href="https://www.facebook.com/vishesh.mistry?fref=ts" style="color: blue;"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+          <br><br>
+          <p style="">mistry.1@iitj.ac.in</p>
+          <br>
+          <p style="font-weight:bold;font-size:18px;">VISHESH MISTRY</p>
+          <p style="font-weight:bold;font-size:18px;">ASSISTANT HEAD</p>
+        
+        </div>
+      </div>
+      </div>
+      
+      </div>
+      
+      
+      
+      </section>
+    </div>
+
+    
+<!--- GALLARY Tab -->
+  
+  
+<!--footer tab content-->
+ <footer id="contact">
+  <div class="row" style="background-color:#424242;padding-left:10%;">
+            <div class="col s12 m3 l3" >
+              <h3 style="color:white;font-size:16px;">All Clubs</h3>
+              <ul style="">
+                <li><a style="font-size:12px;" href="../aeromodelling/aeromodelling.html">Aeromodelling Club</a></li>
+                <li><a style="font-size:12px;" href="../automobile/automobile.html">Automobile Club</a></li>
+                <li><a style="font-size:12px;" href="../astronomy/astronomy.html">Astronomy Club</a></li>
+                <li><a style="font-size:12px;" href="../electronics/electronics.html">Electronics Club</a></li>
+                <li><a style="font-size:12px;" href="../programming/programming.html">Programming Club</a></li>
+                <li><a style="font-size:12px;" href="../robotics/robotics.html">Robotics Club</a></li>
+                <li><a style="font-size:12px;" href="../science/science.html">Science Club</a></li>
+              </ul>
+            </div>
+
+             <div class="col s12 m3 l3" >
+              <h3 style="color:white;font-size:16px;">OTHER LINKS</h3>
+              <ul>
+                <li><a  style="font-size:12px;" style="color:white;" href="http://iitj.ac.in/" target="_blank">IIT Jodhpur</a></li>
+                <li><a  style="font-size:12px;" href="http://students.iitj.ac.in/" target="_blank">Students' Gymkhana</a></li>
+              </ul>
+            </div>
+
+      <div class="col s12 m3 l3" >
+              <h3 style="color:white;font-size:16px;">CONTACT US</h3>
+              <ul><li><a style="font-size:12px;">IIT Jodhpur Hostels, GPRA, Kendranchal Colony, Vivek Vihar, New Pali Road,<br> Jodhpur, Rajasthan 342005, India.<br>Phone No: +91-9772721750 </a></li></ul>
+            </div>
+
+            <div class="col s12 m3 l3" >
+              <h3 style="color:white;font-size:16px;">Website Maintainers</h3> 
+            
+            </div>
+
+            </div>
+</footer>
+
+      
+    </main>
+    </div>
+    
+    <script src="../../material.min.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,422 @@
+<html lang="en">
+  <head>
+	
+  <!-- LINK ICONS-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="assest/font-awesome/css/font-awesome.min.css">
+	 <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+          
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Technical Society IIT Jodhpur</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="material.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+	
+
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 100;
+	  visibility:visible;
+    }
+	img{
+		-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+		filter: grayscale(z0%);
+		padding:10px;
+		
+	
+	}
+	img:hover{
+		
+		-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+		
+		filter:drop-shadow(8px 8px 10px grey);
+	}
+	
+	div.top {
+	margin:20px;
+	position: relative;
+	width: 220px;
+	height: 250px;
+	overflow: hidden;
+	padding:0px;
+	}	
+	
+	div.top div {
+		width: 220px;
+		height:250px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		filter:drop-shadow(10px 10px 10px 10px grey);
+		text-align: center;
+   		-webkit-transition: left 1s ease-in-out;
+		}
+	div.top div.first img{
+		-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+		filter: grayscale(30%);
+		height:100%;
+		width:100%;
+	}	
+	div.top div.first {
+		z-index: 200;
+		
+		}		
+		
+	div.top:hover div.first {
+	-webkit-transition: left 1s ease-in-out;
+	left: -250px;
+	}
+		/*
+		 *  STYLE 14
+		 */
+
+		#style-14::-webkit-scrollbar-track
+		{
+			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.6);
+			background-color: #CCCCCC;
+		}
+
+		#style-14::-webkit-scrollbar
+		{
+			width: 10px;
+			background-color: #F5F5F5;
+		}
+
+		#style-14::-webkit-scrollbar-thumb
+		{
+			background-color: #FFF;
+			background-image: -webkit-linear-gradient(90deg,
+													  rgba(0, 0, 0, 1) 0%,
+													  rgba(0, 0, 0, 1) 25%,
+													  transparent 100%,
+													  rgba(0, 0, 0, 1) 75%,
+													  transparent)
+		}
+
+	.carousel-item img{ height:250px;width:400px;}
+	
+	.modal-content ul li:hover{background:#DADADA; -webkit-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);}
+    
+	</style>
+	
+	<script>
+$(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      in_duration: 300, // Transition in duration
+      out_duration: 200, // Transition out duration
+      starting_top: '4%', // Starting top style attribute
+      ending_top: '10%', // Ending top style attribute
+      
+    }
+	);
+  });
+    
+   $(document).ready(function(){
+      
+		$('.carousel.carousel-slider').carousel({full_width: true});
+        
+    });
+
+  $('.carousel.carousel-slider').carousel({full_width: true});
+        
+</script>
+
+  </head>
+  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+	
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        </div>
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+          <h3 align="center">Technical Society, Student Gymkhana<br> IIT Jodhpur</h3>
+        </div>
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        </div>
+        
+      </header>
+	  
+      <main class="mdl-layout__content">
+<!-- OVERVIEW Tab content-->
+        <div class="mdl-layout__tab-panel is-active" id="home">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
+              <i class="material-icons">info_outline</i>
+            </header>
+            <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+              <div class="mdl-card__supporting-text">
+                <h4>Overview</h4>
+                TO CREATE and foster a spirit of understanding among the peoples of the world.
+				TO PROMOTE the principles of good government and good citizenship.
+				TO TAKE an active interest in the civic, cultural, social and moral welfare of the community.
+				TO UNITE the clubs in the bonds of friendship, good fellowship, and mutual understanding.
+              </div>
+              
+            </div>
+            
+          </section>
+		  
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+		  <!-- corosel begins-->
+            <div class="carousel">
+
+			<a class="carousel-item" href="#one!"><img src="images/image1.jpg"></a>
+			<a class="carousel-item" href="#two!"><img src="images/image2.jpg"></a>
+			<a class="carousel-item" href="#three!"><img src="images/images3.jpg"></a>
+			<a class="carousel-item" href="#three!"><img src="images/image4.jpg"></a>
+			<a class="carousel-item" href="#three!"><img src="images/image5.jpg"></a>
+			
+		  </div>
+      
+					
+			
+			<!---corousel finishes-->
+           
+          </section>
+        
+          <section class="section--footer mdl-color--white mdl-grid">
+            <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+              <div class="section__circle-container__circle mdl-color--accent section__circle--big"></div>
+            </div>
+            <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+              <h5>Lorem ipsum dolor sit amet</h5>
+              Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
+            </div>
+            <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+              <div class="section__circle-container__circle mdl-color--accent section__circle--big"></div>
+            </div>
+            <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+              <h5>Lorem ipsum dolor sit amet</h5>
+              Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
+            </div>
+          </section>
+        </div>
+		
+		
+        <footer class="mdl-mega-footer">
+          <div class="mdl-mega-footer--middle-section">
+            <div class="mdl-mega-footer--drop-down-section">
+              <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+              <h1 class="mdl-mega-footer--heading">Links</h1>
+              <ul class="mdl-mega-footer--link-list">
+				<li><a href="#">Aeromodelling Club</a></li>
+				<li><a href="#">Automobile Club</a></li>
+                <li><a href="#">Astronomy Club</a></li>
+                <li><a href="#">Electronics Club</a></li>
+                <li><a href="#">Programming Club</a></li>
+                <li><a href="#">Robotics Club</a></li>
+                <li><a href="#">Science Club</a></li>
+              </ul>
+            </div>
+            <div class="mdl-mega-footer--drop-down-section">
+              <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+              <h1 class="mdl-mega-footer--heading">Other Links</h1>
+              <ul class="mdl-mega-footer--link-list">
+                <li><a href="#">IIT Jodhpur</a></li>
+                <li><a href="#">Student Gymkhana</a></li>
+              </ul>
+            </div>
+            <div class="mdl-mega-footer--drop-down-section">
+              <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+              <h1 class="mdl-mega-footer--heading">Other Links</h1>
+              <ul class="mdl-mega-footer--link-list">
+                <li><a href="#">IGNUS</a></li>
+                <li><a href="#">VARCHAS</a></li>
+                <li><a href="#">NIMBLE</a></li>
+                <li><a href="#">SPANDAN</a></li>
+              </ul>
+            </div>
+            <div class="mdl-mega-footer--drop-down-section">
+              <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+              <h1 class="mdl-mega-footer--heading">Contact Us</h1>
+              <ul class="mdl-mega-footer--link-list">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Gmail</a></li>
+                <li><a href="#">Youtube</a></li>
+              </ul>
+            </div>
+          </div>
+           <div class="mdl-mega-footer--bottom-section">
+            <div class="mdl-logo">
+              WebSite Maintainers
+            </div>
+            <ul class="mdl-mega-footer--link-list">
+              
+              <li><a href="#">TEAM D</a></li>
+            </ul>
+          </div>
+        </footer>
+      </main>
+    </div>
+	
+	
+          
+    <!-- modal class-->
+		<a class="waves-effect waves-light btn modal-trigger z-depth-2" id="view-source" href="#modal3">CLUBS</a>
+		<div id="modal3" class="modal bottom-sheet" id="style-14" style="z-index:500;display:block;opacity:0;bottom:-100%;">
+		
+			<div class="modal-content" >
+				
+				
+				<h4 style="">TECHNICAL CLUBS IIT JODHPUR</h4>
+				<ul class="collection"style="border:0px solid white;">
+					<li class="collection-item-avatar"  >
+						<div class="row">
+						<div class="col s2">
+							<img class=" circle responsive-img materialboxed" style="-webkit-filter: grayscale(100%); filter: grayscale(0%);" src="images/aeromodelling.jpg" height="200px" width="150px"></img>
+						</div>
+						<div class="col s10">
+						<span class="title" style="font-size:18px;">Aeromodelling</span>
+						<p>hello</p>
+						<a href="#" class="secondary-content">
+							<button class="waves-effect waves-light btn" onclick="window.location.href='aeromodelling.html'">Enter..</button>
+						</a>
+						</div>
+						</div>
+						
+					</li>
+					<li class="collection-item-avatar" style="border:none" >
+						<div class="row">
+						<div class="col s2">
+							<img class="circle responsive-img materialboxed" src="images/automobile.jpg" style="-webkit-filter: grayscale(100%); filter: grayscale(0%);" src="images/aeromodelling.jpg" height="200px" width="150px"></img>
+						</div>
+						<div class="col s10">
+						<span class="title" style="font-size:18px;">Automobile</span>
+						<p>hello</p>
+						<a href="#" class="secondary-content">
+							<button class="waves-effect waves-light btn" onclick="window.location.href='automobile.html'">Enter..</button>
+						</a>
+						</div>
+						</div>
+						
+					</li>
+					<li class="collection-item-avatar" style="border:none" >
+						<div class="row">
+						<div class="col s2">
+							<img class="circle responsive-img materialboxed" src="images/astronomy.jpg" style="-webkit-filter: grayscale(100%); filter: grayscale(0%);" src="images/aeromodelling.jpg" height="200px" width="150px"></img>
+						</div>
+						<div class="col s10">
+						<span class="title" style="font-size:18px;">Astronomy</span>
+						<p>hello</p>
+						<a href="#" class="secondary-content">
+							<button class="waves-effect waves-light btn" onclick="window.location.href='astronomy.html'">Enter..</button>
+						</a>
+						</div>
+						</div>
+						
+					</li>
+					<li class="collection-item-avatar"  >
+						<div class="row">
+						<div class="col s2">
+							<img class="circle responsive-img materialboxed" src="images/electronics.jpg"style="-webkit-filter: grayscale(100%); filter: grayscale(0%);" src="images/aeromodelling.jpg" height="200px" width="150px"></img>
+						</div>
+						<div class="col s10">
+						<span class="title" style="font-size:18px;">Electronics</span>
+						<p>hello</p>
+						<a href="#" class="secondary-content">
+							<button class="waves-effect waves-light btn" onclick="window.location.href='electronics.html'">Enter..</button>
+						</a>
+						</div>
+						</div>
+						
+					</li>
+					<li class="collection-item-avatar" style="border:none" >
+						<div class="row">
+						<div class="col s2">
+							<img class="circle responsive-img materialboxed" src="images/programming.jpg" style="-webkit-filter: grayscale(100%); filter: grayscale(0%);" src="images/aeromodelling.jpg" height="200px" width="150px"></img>
+						</div>
+						<div class="col s10">
+						<span class="title" style="font-size:18px;">Programming</span>
+						<p>hello</p>
+						<a href="#" class="secondary-content">
+							<button class="waves-effect waves-light btn" onclick="window.location.href='programming.html'">Enter..</button>
+						</a>
+						</div>
+						</div>
+						
+					</li>
+					<li class="collection-item-avatar" style="border:none" >
+						<div class="row">
+						<div class="col s2">
+							<img class="circle responsive-img materialboxed" src="images/robotics.jpg" style="-webkit-filter: grayscale(100%); filter: grayscale(0%);" src="images/aeromodelling.jpg" height="200px" width="150px"></img>
+						</div>
+						<div class="col s10">
+						<span class="title" style="font-size:18px;">Robotics</span>
+						<p>hello</p>
+						<a href="#" class="secondary-content">
+							<button class="waves-effect waves-light btn" onclick="window.location.href='aeromodelling.html'">Enter..</button>
+						</a>
+						</div>
+						</div>
+						
+					</li>
+					<li class="collection-item-avatar" style="border:none" >
+						<div class="row">
+						<div class="col s2">
+							<img class="circle responsive-img materialboxed" src="images/science.jpg"style="-webkit-filter: grayscale(100%); filter: grayscale(0%);" src="images/aeromodelling.jpg" height="200px" width="150px"></img>
+						</div>
+						<div class="col s10">
+						<span class="title" style="font-size:18px;">Science Club</span>
+						<p>hello</p>
+						<a href="#" class="secondary-content">
+							<button class="waves-effect waves-light btn" onclick="window.location.href='science.html'">Enter..</button>
+						</a>
+						</div>
+						</div>
+						
+					</li>
+					
+				
+				</ul>
+				
+			
+			</div>
+		
+		</div>
+		<!-- finish-->
+	
+	<script src="../../material.min.js"></script>
+  </body>
+</html>

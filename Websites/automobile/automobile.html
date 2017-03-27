@@ -1,0 +1,628 @@
+<html lang="en">
+  <head>
+	 <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+          
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Automobile@IITJ</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="material.min.css">
+    <link rel="stylesheet" href="styles.css">
+	
+	<link rel="stylesheet" href="../assest/fonta/css/font-awesome.min.css">
+	 <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+      <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script src="../assest/boot/js/jquery.js"></script>
+	
+	
+    <style>
+    @media screen and (max-width: 2500px){
+      .float_home{
+        margin-left: 50%;!important;
+        color:white;
+        padding:10px;
+        font-size: 16px;
+
+      }
+    }
+
+    @media screen and (max-width: 820px){
+      .float_home{
+        
+        margin-left: 0%;!important;
+
+      }
+    }
+     #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+	  visibility:hidden;
+    }
+	img{
+		-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+		filter: grayscale(60%);
+		padding:10px;
+		
+	
+	}
+	img:hover{
+		
+		-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+		
+		filter:drop-shadow(8px 8px 10px grey);
+	}
+	
+	div.top {
+	margin:20px;
+	position: relative;
+	width: 200px;
+	height: 220px;
+	overflow: hidden;
+	padding:0px;
+	}	
+	
+	div.top div {
+		width: 200px;
+		height:220px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		filter:drop-shadow(10px 10px 10px 10px grey);
+		text-align: center;
+   		-webkit-transition: left 1s ease-in-out;
+		}
+	div.top div.first img{
+		-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+		filter: grayscale(30%);
+		height:100%;
+		width:100%;
+	}	
+	div.top div.first {
+		z-index: 1000;
+		
+		}		
+		
+	div.top:hover div.first {
+	-webkit-transition: left 1s ease-in-out;
+	left: -200px;
+	}
+  footer a{
+    color:white;font-size:14px;
+  }
+	
+   #load{
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:9999;
+    background:url("http://feliciaday.com/wp-content/themes/felicia_day/_/style/images/loading.gif") no-repeat center center rgba(0,0,0,1)
+}
+    </style>
+
+    <script type="text/javascript">
+        document.onreadystatechange = function () {
+      var state = document.readyState
+  if (state == 'interactive') {
+       document.getElementById('contents').style.visibility="hidden";
+  } else if (state == 'complete') {
+      setTimeout(function(){
+         document.getElementById('interactive');
+         document.getElementById('load').style.visibility="hidden";
+         document.getElementById('contents').style.visibility="visible";
+      },1000);
+  }
+}
+    </script>
+  <body>
+      <div id="load"></div>
+      <div class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base" id="contents">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<!-- Header and Nav Bar -->
+      <header class="mdl-layout__header mdl-layout__header--scroll" style="background-image:url(images/back.png);background-size: 100%;">
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        </div>
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+          <div class="col-lg-6">
+            <h3 align="center" style="color:#3B3168;">Automobile Club IIT Jodhpur</h3>
+          </div>
+          <div class="col-lg-6" style="margin-left:300px;">
+          <img src="images/tech.png" height="200px" width="400px" align="right"></img>
+          </div>
+        </div>
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        </div>
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect" style="background-color:#3B3168 ;overflow-x:scroll;" >
+          <a href="#home" class="mdl-layout__tab is-active">HOME</a>
+          <a href="#projects" class="mdl-layout__tab">PROJECTS</a>
+          <a href="#technology" class="mdl-layout__tab">ACHEIVEMENTS</a>
+          <a href="#team" class="mdl-layout__tab">TEAM</a>
+          <a href="#gallery" class="mdl-layout__tab">GALLERY</a>
+          <!-- <span class="mdl-layout__tab" style="font-size:20;margin-left:400px;color:white;">AUTOMOBILE CLUB</span> -->
+           <a class="float_home" style="padding:20px;color:white;" href="../home/home2.html"><i class="fa fa-home fa-2x"> </i></a>	
+        </div>
+      </header>
+	  
+      <main class="mdl-layout__content">
+<!-- OVERVIEW Tab content-->
+        <div class="mdl-layout__tab-panel is-active" id="home">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone  mdl-color-text--white">
+              <img src="images/car.jpg" width="220px" height="200px"></img>
+            </header>
+            <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+              <div class="mdl-card__supporting-text">
+                <h4>Overview</h4>
+                WE organise lectures for the students who are interested in the Automobile Club.<br>
+				  WE also organise workshops on software like SolidWorks and Ansys, to provide members with latest tools for automotive engineering.<br>
+				WE believe in our dream and follow our passion.That’s why we say -Passion to Podium.<br>
+              </div>
+              
+            </div>
+          </section>
+		  
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                <h4 class="mdl-cell mdl-cell--12-col"><b>Events</b></h4>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <div class="section__circle-container__circle mdl-color--primary">
+                    <img src="images/solid.png" style="margin-left:-5px;"width="72px" height="60px"></img>
+                  </div>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5>CAD Knight</h5>
+                  As we all know the importance of intuitive Virtual Design in present technical/industrial era. The entire process including prototype creation, manufacturing, testing, enhancing intelligence begins with a 3D Model & Analysis using computer software like SolidWorks, Catia, Ansys, etc.
+                </div>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <div class="section__circle-container__circle mdl-color--primary">
+                    <img src="images/ques.png" width="60px" height="70px"></img>
+                  </div>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5>Auto-Quiz</h5>
+                  Automobile Club brings to you a chance to brag about your knowledge of wheels. Not
+					just the glossy finish or matte feel of the celeb statuses of dream machines and brain child of some of the finest.
+                </div>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <div class="section__circle-container__circle mdl-color--primary">
+                    <img src="images/mech.png" width="60px" height="60px"></img>
+                  </div>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5>Clash of KLANNs</h5>
+                  Design a mechanical walker using linkage mechanisms which converts rotatory motion of motor into footstep motion and simulate it with DPDT switch to cross given arena
+                </div>
+              </div>
+             
+            </div>
+           
+          </section>
+          <br><br>
+          <div class="row">
+
+            <div class="col s12 l6 m6">
+              <div class="row">
+                <div class="col s12 l4 m4">
+                  <img src="images/solaris.png" width="150px" height="100px" style="margin-left:-8px;"></img>
+                </div>
+                <div class="col s12 l8 m8">
+                   <h5>Solaris</h5>
+                    Design a solar powered car capable to knock its way out turns and obstacles like small pebbles, sand etc., and is tested for speed , maneuverability and handling.
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12 l6 m6">
+              <div class="row">
+                <div class="col s12 l4 m4">
+                  <img src="images/car.png" width="150px" height="120px" style="margin-left:-8px;"></img>
+                </div>
+                <div class="col s12 l8 m8">
+                  <h5>Full Throttle</h5>
+                    Make a wireless remote controlled machine, powered only by an IC engine, which can race against other opponents on an off-road dirt track with many obstacles.
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+		
+<!-- Projects tab content-->		
+
+        <div class="mdl-layout__tab-panel" id="projects">
+          <section class="section--center mdl-grid mdl-grid--no-spacing">
+            <div class="mdl-cell mdl-cell--12-col">
+              <h4>Projects</h4>
+              Here lists the undergoing projects under Robotics Club. These projects are beingdone by students of different domains sharing similar interests.
+              <ul class="toc">
+                <h4>Contents</h4>
+                <a href="#lorem1">SAE Efficycle</a>
+                <a href="#lorem2">SAE Baja</a>
+                <a href="#lorem3">HPVC</a>
+                <a href="#lorem4">RC IC car </a>
+              </ul>
+
+              <h5 id="lorem1">SAE Efficycle</h5>
+              
+              <ul>
+                <li>“EFFI-CYCLE” derived from Efficient-Cycle promote the objective of providing an opportunity to the students to conceive, design and fabricate a three wheel configuration vehicle powered by human-electric hybrid power and capable of
+                seating two passengers catering to the day to day mobility needs.</li>
+              </ul>
+
+              <p>
+				The vehicle must be aerodynamic, engineered for performance &amp; safety and ergonomically designed. The objective is to promote innovation and generate consciousness amongst the young engineers towards environment-friendly mobility solution.
+				</p>
+					<button  class="btn waves-effect waves-light" ><a style="color:white;" href="https://en.wikipedia.org/wiki/SAE_India"> Read More</a>
+							
+						</button>
+
+             <h5 id="lorem2">SAE Baja</h5>
+             
+              <ul>
+                The BAJA SAE is an event for the undergraduate engineering students, organized globally by the Society of Automotive Engineers, USA.
+              </ul>
+
+              <p>
+				The event originated in the name of Mini - BAJA, in the year 1976 at University of Carolina. Since then, the event has spanned across six countries - USA, Mexico, South Africa, Korea, Brazil and India. The BAJA SAE tasks the students to design, fabricate and validate a single seater four - wheeled off road vehicle to take part in series of events spread over a course of 3 days that test the vehicle for the sound engineering practices that have gone into it, the agility of the vehicle in terms of gradability, speed, acceleration and maneuverability characteristics and finally its ability to endure that back breaking durability test.
+				</p>
+          <button  class="btn waves-effect waves-light" ><a style="color:white;" href="https://en.wikipedia.org/wiki/Baja_SAE"> Read More</a>
+              
+            </button>
+				
+			<h5 id="lorem3">HPVC (Human Powered Vehicle Challenge) </h5>
+              <p>
+				ASME's international Human Powered Vehicle Challenge (HPVC) provides an opportunity for students to demonstrate the application of sound engineering design principles in the development of sustainable and practical transportation alternatives. In the HPVC, students work in teams to design and build efficient, highly engineered vehicles for everyday use—from commuting to work, to carrying goods to market.
+        <b>This project is in its inception.</b>
+
+				</p>
+				<button  class="btn waves-effect waves-light" href="articles.html"><a style="color:white;" href="https://en.wikipedia.org/wiki/International_Human_Powered_Vehicle_Association"> Read More</a>
+							
+						</button>
+			<h5 id="lorem4">RC IC car </h5>
+              <p>
+				This project provides ample opportunity for beginners to learn the basics of the automobile and nurture them for higher projects such as SAE BAJA, HPVC, etc. In this project, they have to make a wireless remote controlled machine, powered only by an IC engine, which can race against other opponents on an off-road dirt track with many obstacles
+				</p>
+				<button  class="btn waves-effect waves-light" href="articles.html"><a style="color:white;" href="https://en.wikipedia.org/wiki/Radio-controlled_car"> Read More</a>	
+						</button>
+            </div>
+          </section>
+        </div>
+		
+<!-- Acheivements Tab -->
+	
+		<div class="mdl-layout__tab-panel" id="technology">
+			<div class="row">
+				<div class="col l4 m4 s12">
+					<section class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp hoverable">
+								<div class="mdl-card mdl-cell mdl-cell--12-col">
+								  <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+									<h4 class="mdl-cell mdl-cell--12-col">Terrain Vehicle</h4>
+									
+									<div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+									  <h5>Year 2012</h5>
+									  We fabricated <b> 1st All Terrain Vehicle </b>.
+										<br>
+									</div>
+								  </div>
+								
+								</div>
+							   
+					</section>
+				</div>
+				
+				<div class="col l4 m4 s12">
+					<section class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp hoverable">
+								<div class="mdl-card mdl-cell mdl-cell--12-col">
+								  <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+									<h4 class="mdl-cell mdl-cell--12-col">SAE Efficycle</h4>
+									
+									<div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+									  <h5>Year:2012</h5>
+									 SAE Efficycle Overall Rank: <b>80</b>
+										<br>
+									
+									</div>
+								  </div>
+								</div>
+							   
+					</section>
+				</div>
+				
+				<div class="col l4 m4 s12">
+					<section class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp hoverable">
+								<div class="mdl-card mdl-cell mdl-cell--12-col">
+								  <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+									<h4 class="mdl-cell mdl-cell--12-col">SAE Efficycle</h4>
+									
+									<div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+									  <h5>Year:2014</h5>
+									  SAE Efficycle Overall Rank: <b>31</b>
+									<br>
+									</div>
+								  </div>
+								</div>
+							   
+					</section>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col s2"></div>
+				<div class="col l4 m4 s12">
+					<section class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp hoverable">
+								<div class="mdl-card mdl-cell mdl-cell--12-col">
+								  <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+									<h4 class="mdl-cell mdl-cell--12-col">SAE BAJA</h4>
+									
+									<div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+									  <h5>Year : 2016 </h5>
+									  Virtual Round Rank : <b>54</b>
+                    <br>
+                    Overall Rank : <b> 63 </b>
+									<br>
+									</div>
+								  </div>
+								</div>
+							   
+					</section>
+				</div>
+				
+				<div class="col l4 m4 s12">
+					<section class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp hoverable">
+								<div class="mdl-card mdl-cell mdl-cell--12-col">
+								  <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+									<h4 class="mdl-cell mdl-cell--12-col">SAE BAJA </h4>
+									
+									<div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+									  <h5>Year : 2017</h5>
+									  Qualified the virtual round.
+									<br>									</div>
+								  </div>
+								</div>
+							   
+					</section>
+				</div>
+					<div class="col s2"></div>
+			</div>
+			
+			
+		</div>	
+
+<!--Team Tab -->
+
+<div class="mdl-layout__tab-panel" id="team">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp "style="padding:20px;">
+		  
+			<div class="row" style="width:100%">
+			<div class="col l4 m4 s12"></div>
+			<div class="col l4 m4 s12"style="text-align:center;">
+			<div class="top z-depth-3">
+				<div class="first"style="margin:0px;padding:0px;"><img src="images/abhishek.jpg"style="height:100%;width:100%"></img></div>
+				<div class="second" style="border:1px solid grey;padding-top:30px;">
+					 <a href="https://www.facebook.com/profile.php?id=100006983415870&fref=ts" style="color:blue;"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+					<br><br>
+					<p style="">sharma.4@iitj.ac.in</p>
+					<br>
+					<p style="font-weight:bold;font-size:18px;">Abhishek Sharma</p>
+					<p style="font-weight:bold;font-size:18px;">HEAD</p>
+					
+				
+				</div>
+			</div>
+			</div>
+			<div class="col l4 m4 s12"></div>
+			</div>
+			
+			<div class="row">
+			<div class="col l6 m6 s12"style="text-align:center;">
+			<div class="top z-depth-3">
+				<div class="first"style="margin:0px;padding:0px;"><img src="images/ritwik.jpg"style="height:100%;width:100%"></img></div>
+				<div class="second" style="border:1px solid grey;padding-top:30px;">
+					 <a href="https://www.facebook.com/Ritwik.Kulkarni.IM?fref=ts" style="color:blue;"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+					<br><br>
+					<p style="">kulkarni.2@iitj.ac.in</p>
+					<br>
+				<p style="font-weight:bold;font-size:18px;">Ritwik Kulkarni</p>
+          <p style="font-weight:bold;font-size:18px;">ASSISTANT HEAD</p>
+				
+				</div>
+			</div>
+			</div>
+			<div class="col l6 m6 s12">
+			<div class="top z-depth-3">
+				<div class="first"style="margin:0px;padding:0px;"><img src="images/vivek.jpg"style="height:100%;width:100%"></img></div>
+				<div class="second" style="border:1px solid grey;padding-top:30px;">
+					 <a href="https://www.facebook.com/profile.php?id=100009884261747&fref=ts" style="color:blue;"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+					<br><br>
+					<p style="">singh.12@iitj.ac.in</p>
+					<br>
+					<p style="font-weight:bold;font-size:18px;">Vivek Kr. Singh </p>
+          <p style="font-weight:bold;font-size:18px;">ASSISTANT HEAD</p>
+				
+				</div>
+			</div>
+			</div>
+			
+			</div>
+			
+		  
+		  
+		  </section>
+		</div>
+
+		
+<!--- GALLARY Tab -->
+		<div class="mdl-layout__tab-panel" id="gallery">
+			<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp"style="height:80%;width:80%;overflow-y:scroll;padding:20px;">
+				<div class="row">
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/1.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/2.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/3.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/4.jpg">
+					</div>
+					
+				
+				
+				</div>
+				<div class="row">
+					<div class="col s12 l3 m3">
+						
+						<img class="responsive-img" src="images/5.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/6.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/7.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/8.jpg">
+					</div>
+					
+				
+				
+				</div>
+				<div class="row">
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/9.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/10.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/11.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/12.jpg">
+					</div>
+					
+				
+				
+				</div>
+				<div class="row">
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/13.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/14.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/15.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/17.jpg">
+					</div>
+					
+				
+				
+				</div>
+				<div class="row">
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/16.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/18.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/19.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/20.jpg">
+					</div>
+					
+				
+				
+				</div>
+		  
+		  
+			</section>
+		</div>	
+	
+<!--footer tab content-->
+ <footer id="contact">
+  <div class="row" style="background-color:#424242;padding-left:10%;">
+            <div class="col s12 m3 l3" >
+              <h3 style="color:white;font-size:16px;">All Clubs</h3>
+              <ul style="">
+                <li><a style="font-size:12px;" href="../aeromodelling/aeromodelling.html">Aeromodelling Club</a></li>
+                <li><a style="font-size:12px;" href="../automobile/automobile.html">Automobile Club</a></li>
+                <li><a style="font-size:12px;" href="../astronomy/astronomy.html">Astronomy Club</a></li>
+                <li><a style="font-size:12px;" href="../electronics/electronics.html">Electronics Club</a></li>
+                <li><a style="font-size:12px;" href="../programming/programming.html">Programming Club</a></li>
+                <li><a style="font-size:12px;" href="../robotics/robotics.html">Robotics Club</a></li>
+                <li><a style="font-size:12px;" href="../science/science.html">Science Club</a></li>
+              </ul>
+            </div>
+
+             <div class="col s12 m3 l3" >
+              <h3 style="color:white;font-size:16px;">OTHER LINKS</h3>
+              <ul>
+                <li><a  style="font-size:12px;" style="color:white;" href="http://iitj.ac.in/" target="_blank">IIT Jodhpur</a></li>
+                <li><a  style="font-size:12px;" href="http://students.iitj.ac.in/" target="_blank">Students' Gymkhana</a></li>
+              </ul>
+            </div>
+
+      <div class="col s12 m3 l3" >
+              <h3 style="color:white;font-size:16px;">CONTACT US</h3>
+              <ul><li><a style="font-size:12px;">IIT Jodhpur Hostels, GPRA, Kendranchal Colony, Vivek Vihar, New Pali Road,<br> Jodhpur, Rajasthan 342005, India.<br>Phone No: +91-9772721750 </a></li></ul>
+            </div>
+
+            <div class="col s12 m3 l3" >
+              <h3 style="color:white;font-size:16px;">Website Maintainers</h3> 
+          
+            </div>
+
+            </div>
+</footer>
+
+      
+	  </main>
+    </div>
+    <script src="../../material.min.js" ></script>
+    </div>
+  </body>
+</html>

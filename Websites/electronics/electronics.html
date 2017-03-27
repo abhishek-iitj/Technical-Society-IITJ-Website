@@ -1,0 +1,625 @@
+<html lang="en">
+  <head>
+	 <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+          
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Electronics@IITJ</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="material.min.css">
+    <link rel="stylesheet" href="styles.css">
+	
+	<link rel="stylesheet" href="../assest/fonta/css/font-awesome.min.css">
+	 <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+      <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script src="../assest/boot/js/jquery.js"></script>
+	
+	
+    <style>
+
+    @media screen and (max-width: 2500px){
+      .float_home{
+        margin-left: 50%;!important;
+        color:white;
+        padding:10px;
+        font-size: 16px;
+
+      }
+    }
+
+    @media screen and (max-width: 820px){
+      .float_home{
+        
+        margin-left: 0%;!important;
+
+      }
+    }
+
+     #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+	  visibility:hidden;
+    }
+	img{
+		-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+		filter: grayscale(60%);
+		padding:10px;
+		
+	
+	}
+	img:hover{
+		
+		-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+		
+		filter:drop-shadow(8px 8px 10px grey);
+	}
+	
+	div.top {
+	margin:20px;
+	position: relative;
+	width: 200px;
+	height: 220px;
+	overflow: hidden;
+	padding:0px;
+	}	
+	
+	div.top div {
+		width: 200px;
+		height:220px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		filter:drop-shadow(10px 10px 10px 10px grey);
+		text-align: center;
+   		-webkit-transition: left 1s ease-in-out;
+		}
+	div.top div.first img{
+		-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+		filter: grayscale(30%);
+		height:100%;
+		width:100%;
+	}	
+	div.top div.first {
+		z-index: 1000;
+		
+		}		
+		
+	div.top:hover div.first {
+	-webkit-transition: left 1s ease-in-out;
+	left: -200px;
+	}
+	footer a{
+    color:white;font-size:14px;
+  }
+
+   #load{
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:9999;
+    background:url("http://feliciaday.com/wp-content/themes/felicia_day/_/style/images/loading.gif") no-repeat center center rgba(0,0,0,1)
+}
+    </style>
+
+    <script type="text/javascript">
+        document.onreadystatechange = function () {
+      var state = document.readyState
+  if (state == 'interactive') {
+       document.getElementById('contents').style.visibility="hidden";
+  } else if (state == 'complete') {
+      setTimeout(function(){
+         document.getElementById('interactive');
+         document.getElementById('load').style.visibility="hidden";
+         document.getElementById('contents').style.visibility="visible";
+      },1000);
+  }
+}
+    </script>
+  <body>
+      <div id="load"></div>
+      <div class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base" id="contents">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<!-- Header and Nav Bar -->
+      <header class="mdl-layout__header mdl-layout__header--scroll" style="background-image:url(images/back.png);background-size: 100%;">
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        </div>
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+          <div class="col-lg-6">
+            <h3 align="center" style="color:#3B3168;">Electronics Club IIT Jodhpur</h3>
+          </div>
+          <div class="col-lg-6" style="margin-left:300px;">
+          <img src="images/tech.png" height="200px" width="400px" align="right"></img>
+          </div>  
+        </div>
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        </div>
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect" style="background-color:#3B3168;overflow-x:scroll;">
+          <a href="#home" class="mdl-layout__tab is-active">HOME</a>
+          <a href="#projects" class="mdl-layout__tab">PROJECTS</a>
+          <a href="#technology" class="mdl-layout__tab">TECHNOLOGY</a>
+          <a href="#team" class="mdl-layout__tab">TEAM</a>
+          <a href="#gallery" class="mdl-layout__tab">GALLERY</a>
+
+          <!-- <span class="mdl-layout__tab" style="font-size:20;margin-left:400px;color:white;">ELECTRONICS CLUB</span> -->
+          <a class="float_home"style="" href="../home/home2.html"><i class="fa fa-home fa-2x"> </i></a>	
+        </div>
+      </header>
+	  
+      <main class="mdl-layout__content">
+<!-- OVERVIEW Tab content-->
+        <div class="mdl-layout__tab-panel is-active" id="home">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color-text--white">
+              <img src="images/electronics.jpg" width="220px" height="220px"></img>
+            </header>
+            <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+              <div class="mdl-card__supporting-text">
+                <h4>Overview</h4>
+                TO CREATE and foster a spirit of understanding among the peoples of the world.
+				TO PROMOTE the principles of good government and good citizenship.
+				TO TAKE an active interest in the civic, cultural, social and moral welfare of the community.
+				TO UNITE the clubs in the bonds of friendship, good fellowship, and mutual understanding.
+              </div>
+              
+            </div>
+          </section>
+		  
+           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                <h4 class="mdl-cell mdl-cell--12-col"><b>Events</b></h4>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <div class="section__circle-container__circle mdl-color--primary" >
+                      <img src="images/plus.png" width="60px" height="70px"></img>
+                    </div>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5>People Counter</h5>
+                  We always dream to design a product which could bring a change in social life of people and help people in their daily basis and thus electronics club bring to you People Counter where you will be designing a prototype of a system which can count the number of people present in the building/hall/room.<br>
+                </div>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <div class="section__circle-container__circle mdl-color--primary">
+                    <img src="images/ic.png" width="70px" height="65px"></img>
+                  </div>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5>Technovation</h5>
+                  In this event you have to present your idea and logic implementation of a game show circuit using only logic gates (AND, OR, NOT, NAND, NOR etc.), multiplexers, encoders, encoders, flip-flops and 7-seg displays and LEDs/buzzers. You can use any logic device mentioned above to build your system and 555timer IC for clock generation.
+                </div>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <div class="section__circle-container__circle mdl-color--primary">
+                    <img src="images/alarm.png" width="60px" height="60px"></img>
+                  </div>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5>Anti-Theft Alarm</h5>
+                  You have to design an Anti-Theft Alarm that can alert you if your bag gets snatched away or misplaced.
+                </div>
+              </div>
+             
+            </div>
+           
+          </section>
+          <br><br>
+          <div class="row">
+
+            <div class="col s12 l6 m6">
+              <div class="row">
+                <div class="col s12 l4 m4">
+                  <img src="images/code.jpg" width="150px" height="120px" style="margin-top:20px;"></img>
+                </div>
+                <div class="col s12 l8 m8">
+                   <h5>Digital Code Lock</h5>
+                    It is an on the spot event in which the user will have to connect his mobile phone to the system and enter the password to open the lock. The entry of correct password should be indicated by a distinguished output. Then the user is required to direct infrared beam at the detector that will trigger the circuit to show completion of successful entry of password.
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12 l6 m6">
+              <div class="row">
+                <div class="col s12 l4 m4">
+                 <img src="images/light.jpg" width="150px" height="120px" style="margin-top:20px;"></img>
+                </div>
+                <div class="col s12 l8 m8">
+                 <h5>LIGHT FOLLOWING BOT</h5>
+                  Task is to built a light follower robot without microcontroller.Bot will follow light in a particular path (arena) and reach destination in minimum time...
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+		
+<!-- Projects tab content-->		
+
+        <div class="mdl-layout__tab-panel" id="projects">
+          <section class="section--center mdl-grid mdl-grid--no-spacing">
+            <div class="mdl-cell mdl-cell--12-col">
+              <h4>Projects</h4>
+              Here lists the undergoing projects under Robotics Club. These projects are beingdone by students of different domains sharing similar interests.
+              <ul class="toc">
+                <h4>Contents</h4>
+                <a href="#lorem1">Airport Handling Design</a>
+                <a href="#lorem2">Password Based Circuit Breaker</a>
+                <a href="#lorem3">Technovation</a>
+              
+              </ul>
+
+              <h5 id="lorem1">Airport Handling Design</h5>
+      
+              <p><br>
+				<b>ProblemStatement:</b><br>A Practical Problem makes you think more of a real
+        circumstances suppose that you have been hired by the Jodhpur airport
+        authorities to expand their simultaneous handling of baggage to 3 planes at a
+        time. You have to design a baggage handling conveyor belt to transport
+        baggage to respective planes.<br>
+				
+        Skills Acquired:<br>
+
+          1. GUI interfacing with Arduino.<br>
+
+          2. Wheel encoder design.<br>
+
+          3. Wheel encoder interface with Arduino<br>
+
+          4. Servo interfacing with Arduino<br><br>
+
+          Explanation: Create a GUI between Arduino and PC using any programming
+
+          language which specifies 3 different positions. When a button in the GUI is
+
+          pressed then, conveyor should deliver the object to corresponding location. At
+
+          that location, there should be a mechanism to unload the object.<br><br>
+
+          Steps: This event will take place in three steps.<br>
+
+          1. Designing an encoder for position tracking.<br>
+
+          2. Position control using wheel encoders.<br>
+
+          3. Interface between PC and Arduino for controlling servos and wheel
+
+          encoders.<br></p>
+					<hr>
+
+             <h5 id="lorem2">Password Based Circuit Breaker</h5>
+              <p><br>
+            				<b>Problem Statement:</b> To increase the security levels of the prison, one day the
+
+            jailer of the prison thought to design a system, through which he can access
+
+            the prison cells , through a password only which he knows. Now thinking you
+
+            are the jailer, design a system (circuit) through which only you can open and
+
+            close the prison cell with a unique password assigned to each prison cell.<br><br>
+
+            Skills acquired:<br>
+
+            1. 8051 microcontroller programming<br>
+
+            2. Uses of relay and circuit breakers<br>
+
+            3. Programming microcontrollers<br>
+				</p>
+				<hr>
+			<h5 id="lorem3">Technovation</h5>
+              <p><b>Introduction: </b>Technical Skills can get you a job but Soft Skills can make you the Manager.<br><br>
+              <b>Problem Statement : </b> In this event you have to present your idea and logic implementation of a game show circuit using only logic gates (AND, OR, NOT, NAND, NOR etc.), multiplexers, encoders, encoders, flip-flops and 7-seg displays and
+              LEDs/buzzers. You can use any logic device mentioned above to build your system and 555timer IC for clock generation. <br><br>
+              <b>Event Specification</b>
+              <p>
+            				In the show, two contestants are pitted against each other in the knockout
+            round. After the time starts, all are required to enter different rooms, lock the
+            door, complete the task in the room and then sound the buzzer. After the
+            completion of round, the winner and runner-up are to be determined and the
+            result shown on seven-segment displays. If there is a tie, both will be declared
+            as winner. Following are the criterion for disqualification of a contestant. If a
+            contestant is disqualified, it is to be displayed on the seven-segment
+            display.Once a contestant enters the room after the start of timer, he is not
+            allowed to go out before the completion of the round, otherwise he shall be
+            disqualified.If a contestant is not able to complete the task 5 min after the time
+            started, an alarm should sound meaning disqualification of that contestant and
+            also completion of round.You are the director of the show, and require to
+            design a digital circuit that ensures smooth functioning of the show with all the
+            specified features.
+				</p>
+			
+			
+            </div>
+          </section>
+        </div>
+		
+<!-- Technology Tab -->
+	
+		<div class="mdl-layout__tab-panel" id="technology">
+			<div class="row">
+				<div class="col l4 m4 s12">
+					<section class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp hoverable">
+								<div class="mdl-card mdl-cell mdl-cell--12-col">
+								  <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+									<h4 class="mdl-cell mdl-cell--12-col">MATLAB</h4>
+									
+									<div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+									  MATLAB (matrix laboratory) is a multi-paradigm numerical computing environment and fourth-generation programming language.MATLAB allows matrix manipulations, plotting of functions and data, implementation of algorithms, creation of user interfaces, and interfacing with programs written in other languages, including C, C++, C#, Java, Fortran and Python.
+										<br><button  class="btn waves-effect waves-light" style="margin-left:60%;margin-top:20px;"><a style="color:white;" href="https://en.wikipedia.org/wiki/MATLAB"> Read More</a></button>
+									</div>
+								  </div>
+								
+								</div>
+							   
+					</section>
+				</div>
+				
+				<div class="col l4 m4 s12">
+					<section class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp hoverable">
+								<div class="mdl-card mdl-cell mdl-cell--12-col">
+								  <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+									<h4 class="mdl-cell mdl-cell--12-col">8051 Microcontroller</h4>
+									
+									<div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+									  IT is 40 pin IC 8051 The Intel 8051 is an 8-bit microcontroller which means that most available operations are limited to 8 bits. There are 3 basic "sizes" of the 8051: Short, Standard, and Extended. The Short and Standard chips are often available in DIP (dual in-line package) form, but the Extended 8051 models often have a different form factor, and are not "drop-in compatible".<br>
+										<button  class="btn waves-effect waves-light" style="margin-left:60%;margin-top:20px;"><a style="color:white;" href="https://en.wikibooks.org/wiki/Embedded_Systems/8051_Microcontroller"> Read More</a></button>
+									
+									</div>
+								  </div>
+								</div>
+							   
+					</section>
+				</div>
+				
+				<div class="col l4 m4 s12">
+					<section class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp hoverable">
+								<div class="mdl-card mdl-cell mdl-cell--12-col">
+								  <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+									<h4 class="mdl-cell mdl-cell--12-col">Raspberry Pi</h4>
+									
+									<div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+									  The Raspberry Pi is a series of credit card-sized single-board computers developed in the United Kingdom by the Raspberry Pi Foundation to promote the teaching of basic computer science in schools and developing countries. The original model got way more popular than anticipated, outside of the target market; enthusiasts use it, and the later models, for various uses, such as robotics
+									<br><button  class="btn waves-effect waves-light" style="margin-left:60%;margin-top:20px;"><a style="color:white;" href="https://en.wikipedia.org/wiki/Raspberry_Pi"> Read More</a></button>
+									</div>
+								  </div>
+								</div>
+							   
+					</section>
+				</div>
+			</div>
+		</div>	
+
+<!--Team Tab -->
+
+<div class="mdl-layout__tab-panel" id="team">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp"style="padding:20px;">
+		  
+			<div class="row" style="width:100%">
+			<div class="col l4 m4 s12"></div>
+			<div class="col l4 m4 s12"style="text-align:center;">
+			<div class="top z-depth-3">
+				<div class="first"style="margin:0px;padding:0px;"><img src="images/archit.jpg"style="height:100%;width:100%"></img></div>
+				<div class="second" style="border:1px solid grey;padding-top:30px;">
+					 <a href="https://www.facebook.com/archit.sharma.5661?fref=ts" style="color: blue;"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+					<br><br>
+					<p style="">sharma.2@iitj.ac.in</p>
+					<br>
+					<p style="font-weight:bold;font-size:18px;">ARCHIT SHARMA</p>
+					<p style="font-weight:bold;font-size:18px;">HEAD</p>
+					
+				
+				</div>
+			</div>
+			</div>
+			<div class="col l4 m4 s12"></div>
+			</div>
+			
+			<div class="row">
+			<div class="col l6 m6 s12"style="text-align:center;">
+			<div class="top z-depth-3">
+				<div class="first"style="margin:0px;padding:0px;"><img src="images/divyanshu.jpg"style="height:100%;width:100%"></img></div>
+				<div class="second" style="border:1px solid grey;padding-top:30px;">
+					 <a href="https://www.facebook.com/profile.php?id=100009398004798&fref=ts" style="color:blue;"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+					<br><br>
+					<p style="">agarwal.2@iitj.ac.in</p>
+					<br><p style="font-weight:bold;font-size:16px;">DIVYANSHU AGARWAL</p>
+					<p style="font-weight:bold;font-size:18px;">ASSISTANT HEAD</p>
+				
+				</div>
+			</div>
+			</div>
+			<div class="col l6 m6 s12">
+			<div class="top z-depth-3">
+				<div class="first"style="margin:0px;padding:0px;"><img src="images/chirayu.jpg"style="height:100%;width:100%"></img></div>
+				<div class="second" style="border:1px solid grey;padding-top:30px;">
+					 <a href="https://www.facebook.com/chirayu.parashar?fref=ts" style="color: blue;"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+					<br><br>
+					<p style="">parashar.1@iitj.ac.in</p>
+					<br><p style="font-weight:bold;font-size:16px;">CHIRAYU PARASHAR</p>
+					<p style="font-weight:bold;font-size:18px;">ASSISTANT HEAD</p>
+				
+				</div>
+			</div>
+			</div>
+			
+			</div>
+			
+		  
+		  
+		  </section>
+		</div>
+
+		
+<!--- GALLARY Tab -->
+		<div class="mdl-layout__tab-panel" id="gallery">
+			<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp"style="height:80%;width:80%;overflow-y:scroll;padding:20px;">
+				<div class="row">
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/1.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/2.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/3.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/4.jpg">
+					</div>
+					
+				
+				
+				</div>
+				<div class="row">
+					<div class="col s12 l3 m3">
+						
+						<img class="responsive-img" src="images/5.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/6.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/7.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/10.jpg">
+					</div>
+					
+				
+				
+				</div>
+				<div class="row">
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/9.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/10.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/11.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/12.jpg">
+					</div>
+					
+				
+				
+				</div>
+				<div class="row">
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/13.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/14.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/15.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/16.jpg">
+					</div>
+					
+				
+				
+				</div>
+				<div class="row">
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/17.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/18.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/19.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/20.jpg">
+					</div>
+					
+				
+				
+				</div>
+		  
+		  
+			</section>
+		</div>	
+	
+<!--footer tab content-->
+<footer id="contact">
+  <div class="row" style="background-color:#424242;padding-left:10%;">
+            <div class="col s12 m3 l3" >
+              <h3 style="color:white;font-size:16px;">All Clubs</h3>
+              <ul style="">
+                <li><a style="font-size:12px;" href="../aeromodelling/aeromodelling.html">Aeromodelling Club</a></li>
+                <li><a style="font-size:12px;" href="../automobile/automobile.html">Automobile Club</a></li>
+                <li><a style="font-size:12px;" href="../astronomy/astronomy.html">Astronomy Club</a></li>
+                <li><a style="font-size:12px;" href="../electronics/electronics.html">Electronics Club</a></li>
+                <li><a style="font-size:12px;" href="../programming/programming.html">Programming Club</a></li>
+                <li><a style="font-size:12px;" href="../robotics/robotics.html">Robotics Club</a></li>
+                <li><a style="font-size:12px;" href="../science/science.html">Science Club</a></li>
+              </ul>
+            </div>
+
+             <div class="col s12 m3 l3" >
+              <h3 style="color:white;font-size:16px;">OTHER LINKS</h3>
+              <ul>
+                <li><a  style="font-size:12px;" style="color:white;" href="http://iitj.ac.in/" target="_blank">IIT Jodhpur</a></li>
+                <li><a  style="font-size:12px;" href="http://students.iitj.ac.in/" target="_blank">Students' Gymkhana</a></li>
+              </ul>
+            </div>
+
+      <div class="col s12 m3 l3" >
+              <h3 style="color:white;font-size:16px;">CONTACT US</h3>
+              <ul><li><a style="font-size:12px;">IIT Jodhpur Hostels, GPRA, Kendranchal Colony, Vivek Vihar, New Pali Road,<br> Jodhpur, Rajasthan 342005, India.<br>Phone No: +91-9772721750 </a></li></ul>
+            </div>
+
+            <div class="col s12 m3 l3" >
+              <h3 style="color:white;font-size:16px;">Website Maintainers</h3> 
+            
+            </div>
+
+            </div>
+</footer>
+
+	  </main>
+    </div>
+    
+    <script src="../../material.min.js"></script>
+    </div>
+  </body>
+</html>

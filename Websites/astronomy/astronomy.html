@@ -1,0 +1,503 @@
+<html lang="en">
+  <head>
+	 <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+          
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Astronomy@IITJ</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="material.min.css">
+    <link rel="stylesheet" href="styles.css">
+	
+	<link rel="stylesheet" href="../assest/fonta/css/font-awesome.min.css">
+	 <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+      <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script src="../assest/boot/js/jquery.js"></script>
+	
+	
+<style>
+  @media screen and (max-width: 2500px){
+      .float_home{
+        margin-left: 50%;!important;
+        color:white;
+        padding:10px;
+        font-size: 16px;
+
+      }
+    }
+
+    @media screen and (max-width: 820px){
+      .float_home{
+        
+        margin-left: 0%;!important;
+
+      }
+    }
+
+     #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+	  visibility:hidden;
+    }
+	img{
+		-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+		filter: grayscale(60%);
+		padding:10px;
+		
+	
+	}
+	img:hover{
+		
+		-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+		
+		filter:drop-shadow(8px 8px 10px grey);
+	}
+	
+	div.top {
+	margin:20px;
+	position: relative;
+	width: 200px;
+	height: 220px;
+	overflow: hidden;
+	padding:0px;
+	}	
+	
+	div.top div {
+		width: 200px;
+		height:220px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		filter:drop-shadow(10px 10px 10px 10px grey);
+		text-align: center;
+   		-webkit-transition: left 1s ease-in-out;
+		}
+	div.top div.first img{
+		-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+		filter: grayscale(30%);
+		height:100%;
+		width:100%;
+	}	
+	div.top div.first {
+		z-index: 1000;
+		
+		}		
+		
+	div.top:hover div.first {
+	-webkit-transition: left 1s ease-in-out;
+	left: -200px;
+	}
+	footer a{
+    color:white;
+    font-size:14px;
+  }
+  
+   #load{
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:9999;
+    background:url("http://feliciaday.com/wp-content/themes/felicia_day/_/style/images/loading.gif") no-repeat center center rgba(0,0,0,1)
+}
+    </style>
+
+    <script type="text/javascript">
+        document.onreadystatechange = function () {
+      var state = document.readyState
+  if (state == 'interactive') {
+       document.getElementById('contents').style.visibility="hidden";
+  } else if (state == 'complete') {
+      setTimeout(function(){
+         document.getElementById('interactive');
+         document.getElementById('load').style.visibility="hidden";
+         document.getElementById('contents').style.visibility="visible";
+      },1000);
+  }
+}
+    </script>
+  <body>
+      <div id="load"></div>
+      <div class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base" id="contents">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<!-- Header and Nav Bar -->
+      <header class="mdl-layout__header mdl-layout__header--scroll"  style="background-image:url(images/back.png);background-size: 100%;">
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        </div>
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+          <div class="col-lg-6">
+            <h3 align="center" style="color:#3B3168;">Astronomy Club IIT Jodhpur</h3>
+          </div>
+          <div class="col-lg-6" style="margin-left:300px;">
+          <img src="images/tech.png" style="opacity:0.8;"height="200px" width="400px" align="right"></img>
+          </div>
+        </div>
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        </div>
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect" style="background-color:#3b3168;overflow-x:scroll;">
+          <a href="#home" class="mdl-layout__tab is-active">HOME</a>
+          <!--<a href="#projects" class="mdl-layout__tab">PROJECTS</a>-->
+          <a href="#technology" class="mdl-layout__tab">TECHNOLOGY</a>
+          <a href="#team" class="mdl-layout__tab">TEAM</a>
+          <a href="#gallery" class="mdl-layout__tab">GALLERY</a>
+           <a class="float_home"style="" href="../home/home2.html"><i class="fa fa-home fa-2x"> </i></a>	
+        </div>
+      </header>
+	  
+      <main class="mdl-layout__content">
+<!-- OVERVIEW Tab content-->
+        <div class="mdl-layout__tab-panel is-active" id="home">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color-text--white">
+              <img src="images/astronomy.jpg" width="230px" height="260px"></img>
+            </header>
+            <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+              <div class="mdl-card__supporting-text">
+                <h4>Overview</h4>
+                WE read and think about various aspects of cosmos and its theories and expand our knowledge.<br> 
+				        WE keep discussion sessions where we discuss about things we have read and thus share knowledge.<br> 
+                WE keep lectures on the  topics such as theory of relativity, blackhole, how to start with Amateur astronomy, etc.<br> 
+				       
+                We try to spot all the messier objects. <br>
+				        WE compete in Inter-IIT Tech meet which has competitions related to astronomy.
+              </div>
+              
+            </div>
+          </section>
+		  
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                <h4 class="mdl-cell mdl-cell--12-col"><b>Events</b></h4>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <div class="section__circle-container__circle mdl-color--primary">
+                  	<img src="images/ques.png" width="60px" height="70px"></img>
+                  </div>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5>Star Wars</h5>
+                 A quiz based on Astronomy. Questions shall deal with basic mathematics, physics and astronomy. Level of questions will be not very advanced, but shall be such that a hobbyist or amateur can easily answer them.
+                </div>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <div class="section__circle-container__circle mdl-color--primary">
+                  	<img src="images/meteor.png" width="60px" height="70px"></img>
+                  </div>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5>Messier Hunt</h5>
+                  You will be given a list of Deep Space Objects (Messiers) of varying difficulty and you have to point the telescope at exactly each one of them in minimum time interval.
+                </div>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <div class="section__circle-container__circle mdl-color--primary">
+              			<img src="images/aliens.png" width="70px" height="70px"></img>    	
+                  </div>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5>Extra-Terrestrial</h5>
+                  Do aliens exist? How do they look like? Are they more intelligent than us? If they exist then where are they? Such questions are still unanswered but we can imagine how will they look or behave like, so let us run our imagination and create our very own life form.
+                </div>
+              </div>
+             
+            </div>
+           
+          </section>
+          <br><br>
+          <div class="row">
+
+            <div class="col s12 l6 m6">
+              <div class="row">
+                <div class="col s12 l4 m4">
+                  <img src="images/ac.png" width="100px" height="100px"></img>
+                </div>
+                <div class="col s12 l8 m8">
+                  <h5>Acheivement</h5>
+                  We have successfully secured 3rd position in Inter IIT tech meet held in 2014.
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12 l6 m6">
+              <div class="row">
+                <div class="col s12 l4 m4">
+                  <img src="images/camp.PNG" width="150px" height="130px" style="margin-left:-30px;margin-top: -20px;"></img>
+                </div>
+                <div class="col s12 l8 m8">
+                  <h5>Winter Camps</h5>
+                   We also keep Astronomy Winter Camp wherein we focus on training ourselves for the Inter IIT tech meet. 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+		
+<!-- Projects tab content		
+
+        <div class="mdl-layout__tab-panel" id="projects">
+          <section class="section--center mdl-grid mdl-grid--no-spacing">
+            <div class="mdl-cell mdl-cell--12-col">
+              <h4>Projects</h4>
+              Here lists the undergoing projects under Astronomy Club. These projects are being done by students of different domains sharing similar interests.
+              <ul class="toc">
+                <a href="#lorem1">Star Hoping Android Application</a>
+              </ul>
+
+              <h5 id="lorem1">Star Hoping Android Applicationt</h5>
+              The team members are curently working on this project.
+              <ul>
+                <li>We are developing an android application which will give exact Alt/Az for any given Messier object, galaxy, nebullae etc.</li>
+              </ul>
+
+              <p>
+				Removing the usual complexities of apps like star charts this will be a lot simpler version of amateur astronomers who are new to this field. You just enter the name of the object an it will return you the exact coordiantes. Star Charts API is being used for this purpose.
+				</p>
+					<button  class="btn waves-effect waves-light" ><a style="color:white;"href="articles.html"> Read More</a>
+							
+						</button>
+
+             
+            </div>
+          </section>
+        </div>
+		-->
+<!-- Technology Tab -->
+	
+		<div class="mdl-layout__tab-panel" id="technology">
+			<div class="row">
+				<div class="col l4 m4 s12">
+					<section class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp hoverable">
+								<div class="mdl-card mdl-cell mdl-cell--12-col">
+								  <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+									<h4 class="mdl-cell mdl-cell--12-col">BK MAK90 EQ1 (SkyWatcher) </h4>
+									
+									<div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+									  The Sky-Watcher Maksutov-Cassegrains are the ultimate take-anywhere telescopes. They are also ideal if working space is limited. Despite their small dimensions they pack a powerful punch. Their High-Resolution, diffraction limited optical systems are multi-coated to maximize contrast and image sharpness. <br>This Sky-Watcher Maksutov comes in apertures of 90mm, and is available either complete with equatorial mounts and tripods, or as tube assemblies only, which can be mounted onto a standard photographic tripod. Whether your requirement is for terrestrial or astronomical use, these compact scopes are the perfect companion
+										<br><br><button  class="btn waves-effect waves-light" style="margin-left:60%;"><a style="color:white;" href="http://ca.skywatcher.com/_english/01_products/02_detail.php?sid=377"> Read More</a></button>
+									</div>
+								  </div>
+								
+								</div>
+							   
+					</section>
+				</div>
+				
+				<div class="col l4 m4 s12">
+					<section class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp hoverable">
+								<div class="mdl-card mdl-cell mdl-cell--12-col">
+								  <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+									<h4 class="mdl-cell mdl-cell--12-col">Sky-Watcher 8" f/5.9 Dobsonian Telescope</h4>
+									<div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+									  The large 8" aperture draws in copious amounts of light to make detailed observations of the Moon and planets, and still reach out past our solar system to discover dim deep-sky subjects. Its f/5.9 focal ratio and Crayford focuser makes this an ideal choice for imaging. Its relatively fast focal ratio enables devices to capture images in less time than slower scopes, while the unique focusing mechanism employed in the Crayford-style gives it the ability to achieve tack-sharp focusing with zero back-lash that rack-and-pinion focusers generally are unable to.
+										<br><button  class="btn waves-effect waves-light" style="margin-left:60%;margin-top:20px;"><a style="color:white;"href="https://www.bhphotovideo.com/c/product/1141702-REG/sky_watcher_s11610_8_traditional_dobsonian.html"> Read More</a></button>
+									
+									</div>
+								  </div>
+								</div>
+							   
+					</section>
+				</div>
+				
+				<div class="col l4 m4 s12">
+					<section class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp hoverable">
+								<div class="mdl-card mdl-cell mdl-cell--12-col">
+								  <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+									<h4 class="mdl-cell mdl-cell--12-col">ASTROMASTER 130EQ TELESCOPE</h4>
+									
+									<div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+									  	Quick and easy no-tool setup<br>
+										Permanently mounted StarPointer<br>
+										Erect image optics - Ideal for terrestrial use<br>
+										Quick release dovetail attachment - no tool setup<br>
+										German Equatorial mount with Setting circles - to accurately locate and track sky objects<br>
+										Rugged pre-assembled tripod with 1.25" steel tube legs - Provides a rigid and stable platform<br>
+										All coated glass optics for clear, crisp images<br>
+									<br><button  class="btn waves-effect waves-light" style="margin-left:60%;margin-top:20px;"><a style="color:white;"href="http://www.celestron.com/browse-shop/astronomy/telescopes/astromaster-130eq-telescope"> Read More</a></button>
+									</div>
+								  </div>
+								</div>
+							   
+					</section>
+				</div>
+			</div>
+			
+			
+			
+		</div>	
+
+<!--Team Tab -->
+
+<div class="mdl-layout__tab-panel" id="team">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp"style="padding:20px;">
+		  
+			<div class="row" style="width:100%">
+			<div class="col l4 m4 s12"></div>
+			<div class="col s4"style="text-align:center;">
+			<div class="top z-depth-3">
+				<div class="first"style="margin:0px;padding:0px;"><img src="images/daval.jpg"style="height:100%;width:100%"></img></div>
+				<div class="second" style="border:1px solid grey;padding-top:30px;">
+					 <a href="https://www.facebook.com/daval.pargal?fref=ts" style="color:blue;"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+					<br><br>
+					<p style="">pargal.1@iitj.ac.in</p>
+					<br>
+					<p style="font-weight:bold;font-size:18px;">DAVAL PARGAL</p>
+					<p style="font-weight:bold;font-size:18px;">HEAD</p>
+					
+				
+				</div>
+			</div>
+			</div>
+			<div class="col s4"></div>
+			</div>
+			
+			<div class="row">
+			<div class="col s12 m6 l6"style="text-align:center;">
+			<div class="top z-depth-3">
+				<div class="first"style="margin:0px;padding:0px;"><img src="images/bhargav.jpg"style="height:100%;width:100%"></img></div>
+				<div class="second" style="border:1px solid grey;padding-top:30px;">
+					 <a href="https://www.facebook.com/bhargav.kansagara.92?fref=ts" style="color:blue;"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+					<br><br>
+					<p style="">kansagara.1@iitj.ac.in</p>
+					<br>
+					<p style="font-weight:bold;font-size:18px;">Bhargav Kansagara</p>
+          <p style="font-weight:bold;font-size:18px;">ASSISTANT HEAD</p>
+				
+				</div>
+			</div>
+			</div>
+			<div class="col s12 m6 l6">
+			<div class="top z-depth-3">
+				<div class="first"style="margin:0px;padding:0px;"><img src="images/vinit.jpg"style="height:100%;width:100%"></img></div>
+				<div class="second" style="border:1px solid grey;padding-top:30px;">
+					 <a href="https://www.facebook.com/profile.php?id=100003770860475&fref=ts" style="color:blue;"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+					<br><br>
+					<p style="">pradeep.1@iitj.ac.in</p>
+					<br>
+					<p style="font-weight:bold;font-size:18px;">Vinit Joukani</p>
+          <p style="font-weight:bold;font-size:18px;">ASSISTANT HEAD</p>
+				</div>
+			</div>
+			</div>
+			
+			</div>
+			
+		  
+		  
+		  </section>
+		</div>
+
+		
+<!--- GALLARY Tab -->
+		<div class="mdl-layout__tab-panel" id="gallery">
+			<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp"style="height:80%;width:80%;overflow-y:scroll;padding:20px;">
+				<div class="row">
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/1.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/2.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/3.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/4.jpg">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12 l3 m3">
+						
+						<img class="responsive-img" src="images/5.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/6.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/7.jpg">
+					</div>
+					<div class="col s12 l3 m3">
+						<img class="responsive-img" src="images/8.jpg">
+					</div>
+				</div>
+		  
+		  
+			</section>
+		</div>	
+	
+<!--footer tab content-->
+<footer id="contact">
+  <div class="row" style="background-color:#424242;padding-left:10%;">
+            <div class="col s12 m3 l3" >
+              <h3 style="color:white;font-size:16px;">All Clubs</h3>
+              <ul style="">
+                <li><a style="font-size:12px;" href="../aeromodelling/aeromodelling.html">Aeromodelling Club</a></li>
+                <li><a style="font-size:12px;" href="../automobile/automobile.html">Automobile Club</a></li>
+                <li><a style="font-size:12px;" href="../astronomy/astronomy.html">Astronomy Club</a></li>
+                <li><a style="font-size:12px;" href="../electronics/electronics.html">Electronics Club</a></li>
+                <li><a style="font-size:12px;" href="../programming/programming.html">Programming Club</a></li>
+                <li><a style="font-size:12px;" href="../robotics/robotics.html">Robotics Club</a></li>
+                <li><a style="font-size:12px;" href="../science/science.html">Science Club</a></li>
+              </ul>
+            </div>
+
+             <div class="col s12 m3 l3" >
+              <h3 style="color:white;font-size:16px;">OTHER LINKS</h3>
+              <ul>
+                <li><a  style="font-size:12px;" style="color:white;" href="http://iitj.ac.in/" target="_blank">IIT Jodhpur</a></li>
+                <li><a  style="font-size:12px;" href="http://students.iitj.ac.in/" target="_blank">Students' Gymkhana</a></li>
+              </ul>
+            </div>
+
+      <div class="col s12 m3 l3" >
+              <h3 style="color:white;font-size:16px;">CONTACT US</h3>
+              <ul><li><a style="font-size:12px;">IIT Jodhpur Hostels, GPRA, Kendranchal Colony, Vivek Vihar, New Pali Road,<br> Jodhpur, Rajasthan 342005, India.<br>Phone No: +91-9772721750 </a></li></ul>
+            </div>
+
+            <div class="col s12 m3 l3" >
+              <h3 style="color:white;font-size:16px;">Website Maintainers</h3> 
+            </div>
+
+            </div>
+</footer>
+
+	  </main>
+    </div>
+    
+    <script src="../../material.min.js"></script>
+    </div>
+  </body>
+</html>
